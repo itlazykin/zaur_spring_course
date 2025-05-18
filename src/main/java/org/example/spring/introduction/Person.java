@@ -1,5 +1,9 @@
 package org.example.spring.introduction;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component("personBean")
 public class Person {
     private Pet pet;
     private String surname;
@@ -9,6 +13,7 @@ public class Person {
         System.out.println("Person bean is created");
     }
 
+    @Autowired
     public Person(Pet pet) {
         System.out.println("Person bean is created");
         this.pet = pet;
